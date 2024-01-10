@@ -2,7 +2,6 @@ import java.util.*;
 
 class Duplicate {
     int[] removeDuplicate(int arr[]) {
-        Arrays.sort(arr);
         int temp[]=new int[arr.length];
         int count = 0;
         for (int num : arr) {
