@@ -1,29 +1,19 @@
 import java.util.*;
 
 class Duplicate {
-    static int[] removeDuplicate(int arr[]) {
+    int[] removeDuplicate(int arr[]) {
         int temp[]=new int[arr.length];
         int count = 0;
-        for (int num : arr) {
-            if (indexOf(temp, num) == -1) {
-                temp[count] = num;
+        Arrays.sort(arr);
+        for(int i=0;i<arr.length-1;i++){
+            if(arr[i] != arr[i+1]){
+                temp[count] = arr[i];
                 count++;
-            } else
-                continue;
+            }
         }
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = temp[i];
-        }
+        temp[count] = arr[arr.length-1];
         return temp;
     }
-    static int indexOf(int arr[], int val) {
-        for (int i = 0; i < arr.length; i++) {
-            if (val == arr[i])
-                return i;
-        }
-        return -1;
-    }
-    
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         System.out.println("Enter a length of the arr");
@@ -33,12 +23,13 @@ class Duplicate {
         for (int i = 0; i < len; i++) {
             arr[i] = scn.nextInt();
         }
+        Duplicate inst = new Duplicate();
         for (int num : arr) {
             System.out.print(num + "\t");
         }
+        
         System.out.println();
-       
-        arr = removeDuplicate(arr);
+        arr = inst.removeDuplicate(arr);
         for (int num : arr) {
             System.out.print(num + "\t");
         }

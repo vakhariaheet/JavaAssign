@@ -2,6 +2,7 @@ import java.util.Scanner;
 import java.util.Stack;
 
 class Q13Stack {
+    
     int getMinimum(Stack<Integer> stk) {
         int minimum = stk.get(0);
         for (int i = 0; i < stk.size(); i++) {

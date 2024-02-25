@@ -1,35 +1,23 @@
 import java.util.Scanner;
+class Q07Student{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
 
-class Student {
-    String name;
-    int phyicsMarks;
+        System.out.println("Enter number of students: ");
+        int num = sc.nextInt();
 
-    public void getStudent() {
-        Scanner scn = new Scanner(System.in);
-        System.out.println("Enter your name:");
-        name = scn.next();
-        System.out.println("Enter your physics marks:");
-        phyicsMarks = scn.nextInt();
-    }
+        int[] arr = new int[num];
+        System.out.println("Enter marks of students:");
+        int i = 0;
+        for(int mark:arr){
+            arr[i++] = sc.nextInt();
+        }
+        System.out.println("The marks of students are: ");
+       
+        for (int mark : arr) {
+            System.out.println(mark);
+        }
 
-    public void printStudent() {
-        System.out.println("Name:" + name);
-        System.out.println("Marks:" +phyicsMarks);
-;
-    }
-};
-
-class Q07StudentMarks {
-    public static void main(String[] args) {
-        int length;
-         Scanner scn = new Scanner(System.in);
-        System.out.println("Enter total no of Students");
-        length = scn.nextInt();
-        Student students[] = new Student[length];
-        for(Student student : students)
-            student.getStudent();
-        for(Student student : students)
-            student.printStudent();
     }
 }
 
