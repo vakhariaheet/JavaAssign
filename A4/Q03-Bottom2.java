@@ -19,7 +19,7 @@ class Bottom2 {
         System.out.println("Enter the elements of the array");
         for (int i = 0; i < SIZE; i++)
             arr[i] = scn.nextInt();
-        int lowest = arr[0], secondLowest = arr[0];
+        int lowest = Integer.MAX_VALUE, secondLowest = Integer.MAX_VALUE;
         for (int i = 0; i < SIZE; i++) {
             if (arr[i] < lowest) {
                 secondLowest = lowest;
