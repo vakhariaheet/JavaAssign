@@ -7,7 +7,7 @@ public class Doramon extends Applet {
 
     public void paint(Graphics g) {
         // Mouth Blue Bg
-        g.setColor(Color.decode("#629ff7"));
+        g.setColor(Color.decode("#629ff5"));
         g.fillOval(25, 25, 250, 250);
         g.setColor(Color.BLACK);
         g.drawOval(25, 25, 250, 250);
