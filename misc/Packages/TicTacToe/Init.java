@@ -1,17 +1,11 @@
 package TicTacToe;
+import TicTacToe.Moves.Board;
 
-import TicTacToe.Operations.*;
-
-
-import Game.Demo;
-
-public class Init {
+class Init {
     public static void main(String[] args) {
+        Game game = new Game();
         Board board = new Board();
-        board.displayBoard();
-        User user = new User();
-        user.displayUser();
-        Demo demo = new Demo();
-        demo.displayDemo();
+        game.start();
+        board.display();
     }
 }
