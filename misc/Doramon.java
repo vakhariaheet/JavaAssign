@@ -1,7 +1,5 @@
 import java.applet.Applet;
 import java.awt.*;
-
-
 public class Doramon extends Applet {
     public void init() {
         setBackground(Color.WHITE);
@@ -25,6 +23,7 @@ public class Doramon extends Applet {
 
         // Line
         g.drawLine(150, 130, 150, 250);
+       
 
         // Red Nose
         g.setColor(Color.RED);
@@ -48,24 +47,25 @@ public class Doramon extends Applet {
         g.drawLine(90, 160, 35, 155);
 
         //Left Eye
-        g.setColor(Color.RED);
+        g.setColor(Color.WHITE);
         g.fillOval(100, 50, 50, 70);
-        g.setColor(Color.RED);
+        g.setColor(Color.BLACK);
         g.drawOval(100, 50, 50, 70);
-        g.setColor(Color.RED);
+        g.setColor(Color.WHITE);
         g.fillOval(150, 50, 50, 70);
-        g.setColor(Color.RED);
+        g.setColor(Color.BLACK);
         g.drawOval(150, 50, 50, 70);
 
-        g.setColor(Color.WHITE);
+        g.setColor(Color.BLACK);
         g.fillOval(110, 90, 15, 20);
 
 
-        g.setColor(Color.WHITE);
+        g.setColor(Color.BLACK);
         g.fillOval(160, 90, 15, 20);
 
-        g.setColor(Color.BLACK);
-        g.fillOval(170, 95, 5, 8);
+        g.setColor(Color.WHITE);
+        g.fillOval(164, 95, 5, 8);
+        g.fillOval(114, 95, 5, 8);
     }
 }
 /**
