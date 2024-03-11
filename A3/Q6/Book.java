@@ -1,4 +1,6 @@
-package A3.Q6;
+
+
+import java.util.Scanner;
 
 class Book {
     String title;
@@ -33,21 +35,27 @@ class TextBook extends Book {
     }
 };
 
-class Main {
+class Init {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
         System.out.println("TextBook Object:");
         TextBook tb = new TextBook();
-        tb.setTitle("Math");
-        tb.setPages(100);
-        tb.setGradeLvl("10th");
+        System.out.println("Enter Title: ");
+        tb.setTitle(scanner.nextLine());
+        System.out.println("Enter Pages: ");
+        tb.setPages(scanner.nextInt());
+        System.out.println("Enter Grade Level: ");
+        tb.setGradeLvl(scanner.next());
         System.out.println("Title: " + tb.getTitle());
         System.out.println("Pages: " + tb.getPages());
         System.out.println("Grade Level: " + tb.getGradeLvl());
-
+    
         System.out.println("\nBook Object:");
         Book b = new Book();
-        b.setTitle("Science");
-        b.setPages(200);
+        System.out.println("Enter Title: ");
+        b.setTitle(scanner.nextLine());
+        System.out.println("Enter Pages: ");
+        b.setPages(scanner.nextInt());
         System.out.println("Title: " + b.getTitle());
         System.out.println("Pages: " + b.getPages());
 

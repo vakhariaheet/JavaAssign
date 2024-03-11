@@ -60,9 +60,12 @@ public class Doramon extends Applet {
         g.setColor(Color.WHITE);
         g.fillOval(110, 90, 15, 20);
 
-        
+
         g.setColor(Color.WHITE);
         g.fillOval(160, 90, 15, 20);
+
+        g.setColor(Color.BLACK);
+        g.fillOval(170, 95, 5, 8);
     }
 }
 /**

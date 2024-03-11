@@ -1,4 +1,4 @@
-
+import java.util.Scanner;
 
 interface Number {
     public int process(int a, int b);
@@ -19,9 +19,15 @@ class Average implements Number {
 
 class Main {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int a, b;
+        System.out.print("Enter two numbers: ");
+        a = scanner.nextInt();
+        b = scanner.nextInt();
+        scanner.close();
         Sum sum = new Sum();
-        System.out.println("Sum: " + sum.process(5, 10));
+        System.out.println("Sum: " + sum.process(a,b));
         Average avg = new Average();
-        System.out.println("Average: " + avg.process(5, 10));
+        System.out.println("Average: " + avg.process(a,b));
     }
 }

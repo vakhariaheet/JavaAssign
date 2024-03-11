@@ -1,4 +1,4 @@
-
+import java.util.Scanner;
 
 interface AreaInterface {
     double areaOfCircle(double radius);
@@ -24,9 +24,20 @@ class Area implements AreaInterface {
 
     public static void main(String[] args) {
         Area area = new Area();
-        System.out.println("Area of circle: " + area.areaOfCircle(5));
-        System.out.println("Area of rectangle: " + area.areaOfRectangle(5, 10));
-        System.out.println("Area of square: " + area.areaOfSquare(5));
+        Scanner scanner = new Scanner(System.in);
+        double radius, length, breadth, side;
+        System.out.print("Enter radius of circle: ");
+        radius = scanner.nextDouble();
+        System.out.println("Area of circle: " + area.areaOfCircle(radius));
+        System.out.print("Enter length of rectangle: ");
+        length = scanner.nextDouble();
+        System.out.print("Enter breadth of rectangle: ");
+        breadth = scanner.nextDouble();
+        System.out.println("Area of rectangle: " + area.areaOfRectangle(length, breadth));
+        System.out.print("Enter side of square: ");
+        side = scanner.nextDouble();
+        System.out.println("Area of square: " + area.areaOfSquare(side));
+        scanner.close();
     }
 }
 
